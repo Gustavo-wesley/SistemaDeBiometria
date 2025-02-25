@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CadastroBio")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+0867d3abb073f007b4fefd0ba537345a48b0c676")]
 [assembly: System.Reflection.AssemblyProductAttribute("CadastroBio")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CadastroBio")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

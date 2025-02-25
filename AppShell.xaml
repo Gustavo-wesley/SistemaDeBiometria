@@ -9,7 +9,12 @@
     Shell.NavBarIsVisible="False">
 
     <ShellContent
-        Title="Cadastro"
+        Title="Login"
+        ContentTemplate="{DataTemplate local:Login}"
+        Route="login" />
+
+    <ShellContent
+        Title="Cadastrar"
         ContentTemplate="{DataTemplate local:Cadastro}"
         Route="cadastro" />
 

@@ -95,27 +95,9 @@
 
                         </Grid>
 
-                        <Grid ColumnDefinitions="*, *" RowDefinitions="*">
-                            <Button
-                                Text="Esqueceu a senha?"
-                                Grid.Column="0"
-                                Grid.Row="0"
-                                BackgroundColor="Transparent"
-                                TextColor="White"
-                                HorizontalOptions="End"/>
-                            
-                            <Button 
-                                Text="Cadastrar"
-                                Grid.Column="1"
-                                Grid.Row="0"
-                                BackgroundColor="Transparent"
-                                TextColor="White"
-                                HorizontalOptions="Start"/>
-                        </Grid>
-
                     <Button
                         x:Name="btn_login"
-                        Text="Entrar"
+                        Text="Cadastrar"
                         HorizontalOptions="Fill"
                         BackgroundColor="#FF0D0441"
                         BorderWidth="30"
