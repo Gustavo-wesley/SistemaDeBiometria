@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="CadastroBio.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:CadastroBio.View"
+    Shell.FlyoutBehavior="Flyout"
+    Title="CadastroBio"
+    Shell.NavBarIsVisible="False">
+
+    <ShellContent
+        Title="Cadastro"
+        ContentTemplate="{DataTemplate local:Cadastro}"
+        Route="cadastro" />
+
+</Shell>

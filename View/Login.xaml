@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CadastroBio.View.Login"
+             NavigationPage.HasNavigationBar="false">
+
+             <ContentPage.Background>
+                <LinearGradientBrush StartPoint="0.5,1" EndPoint="0.5,0">
+                    <GradientStop Color="#FF232385" Offset="0.3"/>
+                    <GradientStop Color="#FF1A1919" Offset="1"/>
+                </LinearGradientBrush>
+             </ContentPage.Background>
+
+             <VerticalStackLayout VerticalOptions="Center">
+                <Image Source="marca_ufes.png" WidthRequest="250" HeightRequest="250" HorizontalOptions="Fill"/>
+
+                <Frame 
+                    BackgroundColor="Transparent"
+                    WidthRequest="600"
+                    HeightRequest="300"
+                    BorderColor="Transparent">
+
+                    <VerticalStackLayout
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="CenterAndExpand">
+
+                        <Grid ColumnDefinitions="*" RowDefinitions="*, *" >
+
+                            <Entry
+                                Placeholder="Usuário"
+                                BackgroundColor="White"
+                                PlaceholderColor="Black"
+                                WidthRequest="300"
+                                x:Name="loginUsuario"
+                                Grid.Column="0"
+                                Grid.Row="0"
+                                HorizontalOptions="Center"
+                                VerticalOptions="Center"
+                                MaxLength="50"/>
+
+                            <Entry Placeholder="Senha"
+                                BackgroundColor="White"
+                                PlaceholderColor="Black"
+                                WidthRequest="300"
+                                x:Name="senhaUsuario"
+                                Grid.Column="0"
+                                Grid.Row="1"
+                                HorizontalOptions="Center"
+                                VerticalOptions="Center"
+                                IsPassword="True"
+                                MaxLength="50"/>
+
+                            <ImageButton
+                                Grid.Column="1"
+                                Grid.Row="1"
+                                Source="eye_icon.png"
+                                Aspect="AspectFit"
+                                WidthRequest="10"
+                                HeightRequest="10"
+                                Clicked="ImageButton_Clicked"
+                                BackgroundColor="Transparent"
+                                Margin="0,2,25,0"
+                                HorizontalOptions="End"/>
+
+                        </Grid>
+
+                        <Grid ColumnDefinitions="*, *" RowDefinitions="*">
+                            <Button
+                                Text="Esqueceu a senha?"
+                                Grid.Column="0"
+                                Grid.Row="0"
+                                BackgroundColor="Transparent"
+                                TextColor="White"
+                                HorizontalOptions="End"/>
+                            
+                            <Button 
+                                Text="Cadastrar"
+                                Grid.Column="1"
+                                Grid.Row="0"
+                                BackgroundColor="Transparent"
+                                TextColor="White"
+                                HorizontalOptions="Start"/>
+                        </Grid>
+
+                    <Button
+                        x:Name="btn_login"
+                        Text="Entrar"
+                        Clicked="Button_Clicked"
+                        HorizontalOptions="Fill"
+                        BackgroundColor="#FF0D0441"
+                        BorderWidth="30"
+                        BorderColor="Transparent"
+                        WidthRequest="360"/>
+
+                    </VerticalStackLayout>
+                    
+                </Frame>
+             </VerticalStackLayout>
+
+</ContentPage>

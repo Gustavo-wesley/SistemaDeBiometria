@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CadastroBio.View.Cadastro">
+
+ <ContentPage.Background>
+                <LinearGradientBrush StartPoint="0.5,1" EndPoint="0.5,0">
+                    <GradientStop Color="#FF232385" Offset="0.3"/>
+                    <GradientStop Color="#FF1A1919" Offset="1"/>
+                </LinearGradientBrush>
+             </ContentPage.Background>
+
+             <VerticalStackLayout VerticalOptions="Center">
+                <Image Source="marca_ufes.png" WidthRequest="250" HeightRequest="250" HorizontalOptions="Fill"/>
+
+                <Frame 
+                    BackgroundColor="Transparent"
+                    WidthRequest="600"
+                    HeightRequest="300"
+                    BorderColor="Transparent">
+
+                    <VerticalStackLayout
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="CenterAndExpand">
+
+                        <Grid ColumnDefinitions="*" RowDefinitions="*, *, *, *, *, *" >
+
+                            <Entry
+                                Placeholder="Nome"
+                                BackgroundColor="White"
+                                PlaceholderColor="Black"
+                                WidthRequest="300"
+                                x:Name="nomeFuncionario"
+                                Grid.Column="0"
+                                Grid.Row="0"
+                                HorizontalOptions="Center"
+                                VerticalOptions="Center"
+                                MaxLength="50"/>
+
+                            <Entry Placeholder="CPF"
+                                BackgroundColor="White"
+                                PlaceholderColor="Black"
+                                WidthRequest="300"
+                                x:Name="senhaFuncionario"
+                                Grid.Column="0"
+                                Grid.Row="1"
+                                HorizontalOptions="Center"
+                                VerticalOptions="Center"
+                                MaxLength="11"/>
+
+                            <Entry Placeholder="E-mail"
+                                BackgroundColor="White"
+                                PlaceholderColor="Black"
+                                WidthRequest="300"
+                                x:Name="emailFuncionario"
+                                Grid.Column="0"
+                                Grid.Row="2"
+                                HorizontalOptions="Center"
+                                VerticalOptions="Center"
+                                MaxLength="50"/>
+
+                            <Entry Placeholder="Telefone"
+                                BackgroundColor="White"
+                                PlaceholderColor="Black"
+                                WidthRequest="300"
+                                x:Name="TelefoneFuncionario"
+                                Grid.Column="0"
+                                Grid.Row="3"
+                                HorizontalOptions="Center"
+                                VerticalOptions="Center"
+                                MaxLength="20"/>
+
+                            <Entry Placeholder="Senha"
+                                BackgroundColor="White"
+                                PlaceholderColor="Black"
+                                WidthRequest="300"
+                                x:Name="senhaFuncionarioCAD"
+                                Grid.Column="0"
+                                Grid.Row="4"
+                                HorizontalOptions="Center"
+                                VerticalOptions="Center"
+                                IsPassword="True"/>
+
+                            <Entry Placeholder="Confirmar senha"
+                                BackgroundColor="White"
+                                PlaceholderColor="Black"
+                                WidthRequest="300"
+                                x:Name="senhaUsuarioFuncionarioTeste"
+                                Grid.Column="0"
+                                Grid.Row="5"
+                                HorizontalOptions="Center"
+                                VerticalOptions="Center"
+                                IsPassword="True"/>
+
+
+                        </Grid>
+
+                        <Grid ColumnDefinitions="*, *" RowDefinitions="*">
+                            <Button
+                                Text="Esqueceu a senha?"
+                                Grid.Column="0"
+                                Grid.Row="0"
+                                BackgroundColor="Transparent"
+                                TextColor="White"
+                                HorizontalOptions="End"/>
+                            
+                            <Button 
+                                Text="Cadastrar"
+                                Grid.Column="1"
+                                Grid.Row="0"
+                                BackgroundColor="Transparent"
+                                TextColor="White"
+                                HorizontalOptions="Start"/>
+                        </Grid>
+
+                    <Button
+                        x:Name="btn_login"
+                        Text="Entrar"
+                        HorizontalOptions="Fill"
+                        BackgroundColor="#FF0D0441"
+                        BorderWidth="30"
+                        BorderColor="Transparent"
+                        WidthRequest="360"/>
+
+                    </VerticalStackLayout>
+                    
+                </Frame>
+             </VerticalStackLayout>
+
+</ContentPage>
