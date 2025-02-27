@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CadastroBio.Controller.CadastrarAluno"
+             NavigationPage.HasNavigationBar="false">
+
+            <ContentPage.Background>
+                <LinearGradientBrush StartPoint="0.5,1" EndPoint="0.5,0">
+                    <GradientStop Color="#10FFFFFF" Offset="1.4"/>
+                    <GradientStop Color="#D30D2463" Offset="0.2"/>
+                </LinearGradientBrush>
+             </ContentPage.Background>
+
+            <VerticalStackLayout>
+
+                    <Grid 
+                        ColumnDefinitions="*, *, *"
+                        RowDefinitions="*"
+                        HorizontalOptions="Fill"
+                        Background="#00D6DBFF">
+
+                    <Button
+                    Text="CADASTRAR ALUNO"
+                    TextColor="#FF0080E9"
+                    TextTransform="Uppercase"
+                    x:Name="btn_cadastrar_aluno"
+                    FontSize="17"
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    Background="transparent"
+                    WidthRequest="380"
+                    HeightRequest="120"/>
+
+                    <Button
+                    Text="ALTERAR INFORMAÇÕES DE ALUNOS"
+                    TextColor="Black"
+                    x:Name="btn_info_aluno"
+                    Clicked="btn_info_aluno_Clicked"
+                    FontSize="17"
+                    Grid.Column="1"
+                    Grid.Row="0"
+                    Background="transparent"
+                    WidthRequest="380"
+                    HeightRequest="120"/>
+                    
+                    <Button
+                    Text="GERAR RELATÓRIOS"
+                    TextColor="Black"
+                    x:Name="btn_gerar_relatorio"
+                    Clicked="btn_gerar_relatorio_Clicked"
+                    FontSize="17"
+                    Grid.Column="2"
+                    Grid.Row="0"
+                    Background="transparent"
+                    WidthRequest="380"
+                    HeightRequest="120"/>
+                    </Grid>
+
+                    <Frame
+                        WidthRequest="1000"
+                        HeightRequest="400"
+                        BackgroundColor="#D80B0855"
+                        BorderColor="Black">
+
+                        <Grid 
+                            ColumnDefinitions="*, *"
+                            RowDefinitions="*, *, *, *, *"
+                            >
+                            <Entry
+                                Placeholder="Nome Completo"
+                                PlaceholderColor="#AD000000"
+                                BackgroundColor="White"
+                                Grid.Column="0"
+                                Grid.Row="0"
+                                WidthRequest="300"
+                                HeightRequest="30"/>
+                            <Entry
+                                Placeholder="CPF"
+                                PlaceholderColor="#AD000000"
+                                BackgroundColor="White"
+                                Grid.Column="0"
+                                Grid.Row="1"
+                                WidthRequest="300"
+                                HeightRequest="30"/>
+                            <Entry
+                                Placeholder="Matrícula"
+                                PlaceholderColor="#AD000000"
+                                BackgroundColor="White"
+                                Grid.Column="0"
+                                Grid.Row="2"
+                                WidthRequest="300"
+                                HeightRequest="30"/>
+                            <Entry
+                                Placeholder="Curso"
+                                PlaceholderColor="#AD000000"
+                                BackgroundColor="White"
+                                Grid.Column="0"
+                                Grid.Row="3"
+                                WidthRequest="300"
+                                HeightRequest="30"/>
+                            <Entry
+                                Placeholder="Auxílio Estudantil"
+                                PlaceholderColor="#AD000000"
+                                BackgroundColor="White"
+                                Grid.Column="0"
+                                Grid.Row="4"
+                                WidthRequest="300"
+                                HeightRequest="30"/>
+
+                            <Entry
+                                Placeholder=""
+                                PlaceholderColor="#AD000000"
+                                BackgroundColor="White"
+                                Grid.Column="1"
+                                Grid.Row="2"
+                                IsEnabled="False"
+                                WidthRequest="100"
+                                HeightRequest="100"/>
+                            <Button
+                                Text="Gerar Biometria"
+                                TextColor="White"
+                                BackgroundColor="#FF105E92"
+                                Grid.Column="1"
+                                Grid.Row="3"
+                                HeightRequest="30"
+                                WidthRequest="150"/>
+                               
+                        </Grid>
+                    </Frame>
+
+                     <Button
+                            Text="Cadastrar"
+                            TextColor="White"
+                            BackgroundColor="Black"
+                            HorizontalOptions="Center"
+                            
+                            VerticalOptions="End"
+                            Grid.Column="0"
+                            Grid.Row="3"
+                            BorderWidth="14"
+                            BorderColor="Transparent"
+                            WidthRequest="200"
+                            HeightRequest="70"
+                            x:Name="btn_inserir_aluno"
+                            Clicked="btn_inserir_aluno_Clicked"/>
+            </VerticalStackLayout>
+
+                
+
+
+</ContentPage>

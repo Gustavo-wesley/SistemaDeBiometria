@@ -3,7 +3,7 @@
     x:Class="CadastroBio.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:CadastroBio.View"
+    xmlns:local="clr-namespace:CadastroBio.Controller"
     Shell.FlyoutBehavior="Flyout"
     Title="CadastroBio"
     Shell.NavBarIsVisible="False">
@@ -17,5 +17,25 @@
         Title="Cadastrar"
         ContentTemplate="{DataTemplate local:Cadastro}"
         Route="cadastro" />
+
+    <ShellContent
+        Title="Protected_1"
+        ContentTemplate="{DataTemplate local:HomeProtected}"
+        Route="Home"/>
+
+    <ShellContent
+        Title="Protected_1.1"
+        ContentTemplate="{DataTemplate local:CadastrarAluno}"
+        Route="cadastrarAluno"/>
+
+    <ShellContent
+        Title="Protected_1.2"
+        ContentTemplate="{DataTemplate local:InfoAluno}"
+        Route="informacaoAluno"/>
+
+    <ShellContent
+        Title="Protected_1.3"
+        ContentTemplate="{DataTemplate local:Relatorio}"
+        Route="relatorio"/>
 
 </Shell>

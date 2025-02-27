@@ -1,0 +1,83 @@
+is_global = true
+build_property.TargetFramework = net9.0-windows10.0.19041.0
+build_property.TargetPlatformMinVersion = 10.0.17763.0
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 9A19103F-16F7-4668-BE54-9A1E7A4F7556
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = CadastroBio
+build_property.ProjectDir = C:\biometrySistem\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.CsWinRTAotOptimizerEnabled = true
+build_property.CsWinRTAotExportsEnabled = 
+build_property.CsWinRTRcwFactoryFallbackGeneratorForceOptIn = 
+build_property.CsWinRTRcwFactoryFallbackGeneratorForceOptOut = 
+build_property.CsWinRTCcwLookupTableGeneratorEnabled = true
+build_property.CsWinRTMergeReferencedActivationFactories = 
+build_property.CsWinRTAotWarningLevel = 
+build_property.CsWinRTUseWindowsUIXamlProjections = false
+build_property.EffectiveAnalysisLevelStyle = 9.0
+build_property.EnableCodeStyleSeverity = 
+
+[C:/biometrySistem/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = CadastroBio.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[C:/biometrySistem/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = CadastroBio.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[C:/biometrySistem/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = CadastroBio.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+
+[C:/biometrySistem/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = CadastroBio.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+
+[C:/biometrySistem/View/CadastrarAluno.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = CadastroBio.View.CadastrarAluno.xaml
+build_metadata.AdditionalFiles.TargetPath = View\CadastrarAluno.xaml
+build_metadata.AdditionalFiles.RelativePath = View\CadastrarAluno.xaml
+
+[C:/biometrySistem/View/Cadastro.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = CadastroBio.View.Cadastro.xaml
+build_metadata.AdditionalFiles.TargetPath = View\Cadastro.xaml
+build_metadata.AdditionalFiles.RelativePath = View\Cadastro.xaml
+
+[C:/biometrySistem/View/HomeProtected.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = CadastroBio.View.HomeProtected.xaml
+build_metadata.AdditionalFiles.TargetPath = View\HomeProtected.xaml
+build_metadata.AdditionalFiles.RelativePath = View\HomeProtected.xaml
+
+[C:/biometrySistem/View/InfoAluno.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = CadastroBio.View.InfoAluno.xaml
+build_metadata.AdditionalFiles.TargetPath = View\InfoAluno.xaml
+build_metadata.AdditionalFiles.RelativePath = View\InfoAluno.xaml
+
+[C:/biometrySistem/View/Login.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = CadastroBio.View.Login.xaml
+build_metadata.AdditionalFiles.TargetPath = View\Login.xaml
+build_metadata.AdditionalFiles.RelativePath = View\Login.xaml
+
+[C:/biometrySistem/View/Relatorio.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = CadastroBio.View.Relatorio.xaml
+build_metadata.AdditionalFiles.TargetPath = View\Relatorio.xaml
+build_metadata.AdditionalFiles.RelativePath = View\Relatorio.xaml
