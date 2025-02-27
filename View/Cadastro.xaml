@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="CadastroBio.View.Cadastro">
+             x:Class="CadastroBio.Controller.Cadastro"
+             NavigationPage.HasNavigationBar="false">
 
- <ContentPage.Background>
+            <ContentPage.Background>
                 <LinearGradientBrush StartPoint="0.5,1" EndPoint="0.5,0">
                     <GradientStop Color="#FF232385" Offset="0.3"/>
                     <GradientStop Color="#FF1A1919" Offset="1"/>
                 </LinearGradientBrush>
-             </ContentPage.Background>
+            </ContentPage.Background>
 
              <VerticalStackLayout VerticalOptions="Center">
                 <Image Source="marca_ufes.png" WidthRequest="250" HeightRequest="250" HorizontalOptions="Fill"/>
@@ -16,14 +17,14 @@
                 <Frame 
                     BackgroundColor="Transparent"
                     WidthRequest="600"
-                    HeightRequest="300"
+                    HeightRequest="500"
                     BorderColor="Transparent">
 
                     <VerticalStackLayout
                         HorizontalOptions="CenterAndExpand"
                         VerticalOptions="CenterAndExpand">
 
-                        <Grid ColumnDefinitions="*" RowDefinitions="*, *, *, *, *, *" >
+                        <Grid ColumnDefinitions="*" RowDefinitions="*, *, *, *, *, *, *" >
 
                             <Entry
                                 Placeholder="Nome"
@@ -92,17 +93,28 @@
                                 VerticalOptions="Center"
                                 IsPassword="True"/>
 
+                            <Button
+                                x:Name="btn_voltarParaLogin"
+                                Clicked="btn_voltarParaLogin_Clicked"
+                                Grid.Column="0"
+                                Grid.Row="6"
+                                Text="Voltar"
+                                HorizontalOptions="Fill"
+                                BackgroundColor="Transparent"
+                                BorderColor="Transparent"
+                                WidthRequest="100"/>
 
                         </Grid>
 
                     <Button
-                        x:Name="btn_login"
+                        x:Name="btn_cadastrarFuncionario"
+                        Clicked="btn_cadastrarFuncionario_Clicked"
                         Text="Cadastrar"
                         HorizontalOptions="Fill"
                         BackgroundColor="#FF0D0441"
-                        BorderWidth="30"
+                        BorderWidth="10"
                         BorderColor="Transparent"
-                        WidthRequest="360"/>
+                        WidthRequest="320"/>
 
                     </VerticalStackLayout>
                     

@@ -295,3 +295,11 @@ C:\Users\gustw\OneDrive\Desktop\ProgBD\CadastroBio\obj\Debug\net9.0-maccatalyst\
 C:\Users\gustw\OneDrive\Desktop\ProgBD\CadastroBio\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\Cadastro.797455E6.Up2Date
 C:\Users\gustw\OneDrive\Desktop\ProgBD\CadastroBio\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\CadastroBio.genruntimeconfig.cache
 C:\Users\gustw\OneDrive\Desktop\ProgBD\CadastroBio\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\ref\CadastroBio.dll
+C:\Users\gustw\OneDrive\Desktop\ProgBD\CadastroBio\obj\Debug\net9.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\ru_foto.png
+C:\Users\gustw\OneDrive\Desktop\ProgBD\CadastroBio\bin\Debug\net9.0-maccatalyst\maccatalyst-x64\Microsoft.EntityFrameworkCore.dll
+C:\Users\gustw\OneDrive\Desktop\ProgBD\CadastroBio\bin\Debug\net9.0-maccatalyst\maccatalyst-x64\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\gustw\OneDrive\Desktop\ProgBD\CadastroBio\bin\Debug\net9.0-maccatalyst\maccatalyst-x64\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\gustw\OneDrive\Desktop\ProgBD\CadastroBio\bin\Debug\net9.0-maccatalyst\maccatalyst-x64\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\gustw\OneDrive\Desktop\ProgBD\CadastroBio\bin\Debug\net9.0-maccatalyst\maccatalyst-x64\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\gustw\OneDrive\Desktop\ProgBD\CadastroBio\bin\Debug\net9.0-maccatalyst\maccatalyst-x64\Npgsql.dll
+C:\Users\gustw\OneDrive\Desktop\ProgBD\CadastroBio\bin\Debug\net9.0-maccatalyst\maccatalyst-x64\Npgsql.EntityFrameworkCore.PostgreSQL.dll

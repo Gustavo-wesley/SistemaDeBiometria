@@ -42,11 +42,23 @@ build_metadata.AdditionalFiles.ManifestResourceName = CadastroBio.Resources.Styl
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
 
+[C:/Users/gustw/OneDrive/Desktop/ProgBD/CadastroBio/View/CadastrarAluno.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = CadastroBio.View.CadastrarAluno.xaml
+build_metadata.AdditionalFiles.TargetPath = View\CadastrarAluno.xaml
+build_metadata.AdditionalFiles.RelativePath = View\CadastrarAluno.xaml
+
 [C:/Users/gustw/OneDrive/Desktop/ProgBD/CadastroBio/View/Cadastro.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = CadastroBio.View.Cadastro.xaml
 build_metadata.AdditionalFiles.TargetPath = View\Cadastro.xaml
 build_metadata.AdditionalFiles.RelativePath = View\Cadastro.xaml
+
+[C:/Users/gustw/OneDrive/Desktop/ProgBD/CadastroBio/View/HomeProtected.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = CadastroBio.View.HomeProtected.xaml
+build_metadata.AdditionalFiles.TargetPath = View\HomeProtected.xaml
+build_metadata.AdditionalFiles.RelativePath = View\HomeProtected.xaml
 
 [C:/Users/gustw/OneDrive/Desktop/ProgBD/CadastroBio/View/Login.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml

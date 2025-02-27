@@ -1,6 +1,4 @@
-﻿using System.Threading.Tasks;
-using Microsoft.Maui.Controls;
-namespace CadastroBio.View;
+﻿namespace CadastroBio.Controller;
 public partial class Login: ContentPage
 {
     public Login()

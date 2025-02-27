@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CadastroBio.Controller.CadastrarAluno"
+             NavigationPage.HasNavigationBar="false">
+
+            <ContentPage.Background>
+                <LinearGradientBrush StartPoint="0.5,1" EndPoint="0.5,0">
+                    <GradientStop Color="Transparent" Offset="1.4"/>
+                    <GradientStop Color="#D3102150" Offset="0.2"/>
+                </LinearGradientBrush>
+             </ContentPage.Background>
+
+            <VerticalStackLayout
+                VerticalOptions="Center"
+                HorizontalOptions="Center">
+                <Frame
+                    WidthRequest="900"
+                    HeightRequest="600"
+                    BackgroundColor="#41090796">
+                    
+                </Frame>
+            </VerticalStackLayout>
+
+</ContentPage>
