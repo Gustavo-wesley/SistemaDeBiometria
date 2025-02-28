@@ -113,7 +113,7 @@ public class DataBaseConnection
             string queryAluno = 
             "INSERT INTO aluno(idAluno, matricula, curso, auxilio) VALUES (@idAluno, @matricula, @curso, @auxilio)";
             string queryBiometria =
-            "INSERT INTO cadastroBiometrico(idAluno, templateBiometrico, dataCadastro) VALUES (@idAluno ,@templateBiometrico, @dataCadastro) RETURNING idBiometria";
+            "INSERT INTO cadastroBiometrico(idAluno, templateBiometrico, dataCadastro) VALUES (@idAlunok ,@templateBiometrico, @dataCadastro) RETURNING idBiometria";
 
             using (var transaction = connection.BeginTransaction())
             {
@@ -135,7 +135,7 @@ public class DataBaseConnection
                             
                             using (var cmdCadastroBiometrico = new NpgsqlCommand(queryBiometria, connection, transaction))
                             {
-                                cmdCadastroBiometrico.Parameters.AddWithValue("@idAluno", idPessoa);
+                                cmdCadastroBiometrico.Parameters.AddWithValue("@idAlunok", idPessoa);
                                 cmdCadastroBiometrico.Parameters.AddWithValue("@templateBiometrico",NpgsqlTypes.NpgsqlDbType.Bytea, cadastroBiometria.templateBiometrico);
                                 cmdCadastroBiometrico.Parameters.AddWithValue("@dataCadastro", cadastroBiometria.dataCadastro);
                                 cmdCadastroBiometrico.ExecuteNonQuery();

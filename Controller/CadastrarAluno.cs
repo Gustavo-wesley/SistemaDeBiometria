@@ -41,7 +41,8 @@ public partial class CadastrarAluno: ContentPage
             cpfAluno.Text = "";
             matriculaAluno.Text = "";
             cursoAluno.Text = "";
-            auxilioAluno = null;
+            auxilioAluno.SelectedItem = null;
+
         }
     }
     private async void btn_inserir_aluno_Clicked(object sender, EventArgs e)
