@@ -42,12 +42,13 @@
                                 BackgroundColor="White"
                                 PlaceholderColor="Black"
                                 WidthRequest="300"
-                                x:Name="senhaFuncionario"
+                                x:Name="cpfFuncionario"
                                 Grid.Column="0"
                                 Grid.Row="1"
                                 HorizontalOptions="Center"
                                 VerticalOptions="Center"
                                 MaxLength="11"/>
+
 
                             <Entry Placeholder="E-mail"
                                 BackgroundColor="White"
@@ -86,7 +87,7 @@
                                 BackgroundColor="White"
                                 PlaceholderColor="Black"
                                 WidthRequest="300"
-                                x:Name="senhaUsuarioFuncionarioTeste"
+                                x:Name="senhaUsuarioFuncionarioCAD2"
                                 Grid.Column="0"
                                 Grid.Row="5"
                                 HorizontalOptions="Center"

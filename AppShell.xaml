@@ -21,7 +21,7 @@
     <ShellContent
         Title="Protected_1"
         ContentTemplate="{DataTemplate local:HomeProtected}"
-        Route="Home"/>
+        Route="home"/>
 
     <ShellContent
         Title="Protected_1.1"
@@ -35,6 +35,11 @@
 
     <ShellContent
         Title="Protected_1.3"
+        ContentTemplate="{DataTemplate local:Historico}"
+        Route="historico"/>
+
+    <ShellContent
+        Title="Protected_1.4"
         ContentTemplate="{DataTemplate local:Relatorio}"
         Route="relatorio"/>
 

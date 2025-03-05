@@ -16,4 +16,12 @@ public partial class InfoAluno : ContentPage
     {
         await Shell.Current.GoToAsync("//relatorio");
     }
+
+    private async void btn_historico_Clicked(object sender, EventArgs e)
+    {
+        await Shell.Current.GoToAsync("//historico");
+    }
+    private void btn_sair_Clicked(object sender, EventArgs e)
+    {
+    }
 }

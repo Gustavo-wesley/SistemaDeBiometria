@@ -27,11 +27,12 @@
                         <Grid ColumnDefinitions="*" RowDefinitions="*, *" >
 
                             <Entry
-                                Placeholder="Usuário"
+                                Placeholder="E-mail"
                                 BackgroundColor="White"
                                 PlaceholderColor="Black"
                                 WidthRequest="300"
-                                x:Name="loginUsuario"
+                                x:Name="EmailUsuario"
+                                BindingContext="{Binding }"
                                 Grid.Column="0"
                                 Grid.Row="0"
                                 HorizontalOptions="Center"
