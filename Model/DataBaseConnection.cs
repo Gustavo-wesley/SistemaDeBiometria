@@ -80,6 +80,7 @@ public class DataBaseConnection
                         cmdPessoa.Parameters.AddWithValue("@cpf", funcionario.cpf);
                         int idPessoa = (int)cmdPessoa.ExecuteScalar();
 
+
                         using (var cmdFuncionario = new NpgsqlCommand(queryFuncionario, connection, transaction))
                         {
                             cmdFuncionario.Parameters.AddWithValue("@idFuncionario", idPessoa);
@@ -111,9 +112,9 @@ public class DataBaseConnection
             string queryPessoa = 
             "INSERT INTO pessoa(nome,cpf) Values (@nome, @cpf) RETURNING idPessoa";
             string queryAluno = 
-            "INSERT INTO aluno(idAluno, matricula, curso, auxilio) VALUES (@idAluno, @matricula, @curso, @auxilio)";
+            "INSERT INTO aluno(idAluno, matricula, curso, auxilioEstudantil) VALUES (@idAluno, @matricula, @curso, @auxilio)";
             string queryBiometria =
-            "INSERT INTO cadastroBiometrico(idAluno, templateBiometrico, dataCadastro) VALUES (@idAlunok ,@templateBiometrico, @dataCadastro) RETURNING idBiometria";
+            "INSERT INTO cadastroBiometrico(idAluno, templateBiometrico, dataCadastro) VALUES (@idAluno ,@templateBiometrico, @dataCadastro) RETURNING idBiometria";
 
             using (var transaction = connection.BeginTransaction())
             {
@@ -135,7 +136,7 @@ public class DataBaseConnection
                             
                             using (var cmdCadastroBiometrico = new NpgsqlCommand(queryBiometria, connection, transaction))
                             {
-                                cmdCadastroBiometrico.Parameters.AddWithValue("@idAlunok", idPessoa);
+                                cmdCadastroBiometrico.Parameters.AddWithValue("@idAluno", idPessoa);
                                 cmdCadastroBiometrico.Parameters.AddWithValue("@templateBiometrico",NpgsqlTypes.NpgsqlDbType.Bytea, cadastroBiometria.templateBiometrico);
                                 cmdCadastroBiometrico.Parameters.AddWithValue("@dataCadastro", cadastroBiometria.dataCadastro);
                                 cmdCadastroBiometrico.ExecuteNonQuery();
@@ -153,5 +154,129 @@ public class DataBaseConnection
                 }
             }
         }
+    }
+
+    public Aluno ProcurarAluno(string matricula)
+    {
+        using (var connection = new NpgsqlConnection(conexao))
+        {
+            connection.Open();
+            string queryAcharAluno =
+            "SELECT pessoa.nome, pessoa.cpf, aluno.matricula, aluno.curso, aluno.auxilioEstudantil FROM pessoa JOIN aluno ON pessoa.idPessoa = aluno.idAluno WHERE aluno.matricula = @matricula";
+
+            using (var cmdMatAluno = new NpgsqlCommand(queryAcharAluno, connection))
+            {
+                cmdMatAluno.Parameters.AddWithValue("@matricula", matricula);
+
+                using (var reader = cmdMatAluno.ExecuteReader())
+                {
+                    if(reader.Read())
+                    {
+                        return new Aluno
+                        (
+                            reader.GetString(0),  // Nome
+                            reader.GetString(1),  // CPF
+                            reader.GetString(2),  // matricula
+                            reader.GetString(3),  // Curso
+                            reader.GetBoolean(4)  // auxilio
+                        );
+                    }
+                }
+            }
+        }
+        return null;
+    }
+
+    public bool AlterarAluno(Aluno aluno, string cpfAntigo, string matriculaAntiga)
+    {
+        using (var connection = new NpgsqlConnection(conexao))
+        {
+            connection.Open();
+            string queryPessoa = 
+            "UPDATE pessoa SET nome = @nome, cpf = @cpf WHERE cpf = @cpfAntigo";
+
+            string queryAluno = 
+            "UPDATE aluno SET matricula = @matricula, curso = @curso, auxilioEstudantil = @auxilio WHERE matricula = @matriculaAntiga";
+
+            using (var transaction = connection.BeginTransaction())
+            {
+                try
+                {
+                    using (var cmdAlterPessoa = new NpgsqlCommand(queryPessoa, connection, transaction))
+                    {
+                        cmdAlterPessoa.Parameters.AddWithValue("@cpfAntigo", cpfAntigo);
+                        cmdAlterPessoa.Parameters.AddWithValue("@nome", aluno.nome);
+                        cmdAlterPessoa.Parameters.AddWithValue("@cpf", aluno.cpf);
+                        cmdAlterPessoa.ExecuteNonQuery();
+                        Console.WriteLine("Esta indo");
+
+                        using (var cmdAlterAluno = new NpgsqlCommand(queryAluno, connection, transaction))
+                        {
+                            cmdAlterAluno.Parameters.AddWithValue("@matriculaAntiga", matriculaAntiga);
+                            cmdAlterAluno.Parameters.AddWithValue("@matricula", aluno.matricula);
+                            cmdAlterAluno.Parameters.AddWithValue("@curso", aluno.curso);
+                            cmdAlterAluno.Parameters.AddWithValue("@auxilio", aluno.auxilio);
+                            Console.WriteLine("Esta indo");
+                            cmdAlterAluno.ExecuteNonQuery();
+                            Console.WriteLine("Esta indo");
+                        }
+                    }
+                    Console.WriteLine("Esta indo");
+                    transaction.Commit();
+                    return true;
+                }
+                catch (Exception ex)
+                {
+                    transaction.Rollback();
+                    Console.WriteLine("Erro ao tentar alterar aluno", ex.Message);
+                    return false;
+                }
+            }
+        }
+    }
+
+    public bool ExcluirAluno(string matricula, string cpf)
+    {
+        using (var connection = new NpgsqlConnection(conexao))
+    {
+        connection.Open();
+
+        string queryExcluirBiometria = "DELETE FROM cadastroBiometrico WHERE idAluno = (SELECT idAluno FROM aluno WHERE matricula = @matricula)";
+        string queryExcluirAluno = "DELETE FROM aluno WHERE matricula = @matricula";
+        string queryExcluirPessoa = "DELETE FROM pessoa WHERE cpf = @cpf";
+
+        using (var transaction = connection.BeginTransaction())
+        {
+            try
+            {
+                using (var cmdExcluirBiometria = new NpgsqlCommand(queryExcluirBiometria, connection, transaction))
+                {
+                    cmdExcluirBiometria.Parameters.AddWithValue("@matricula", matricula);
+                    cmdExcluirBiometria.ExecuteNonQuery();
+                }
+
+                using (var cmdExcluirAluno = new NpgsqlCommand(queryExcluirAluno, connection, transaction))
+                {
+                    cmdExcluirAluno.Parameters.AddWithValue("@matricula", matricula);
+                    cmdExcluirAluno.ExecuteNonQuery();
+                }
+
+                using (var cmdExcluirPessoa = new NpgsqlCommand(queryExcluirPessoa, connection, transaction))
+                {
+                    cmdExcluirPessoa.Parameters.AddWithValue("@cpf", cpf);
+                    cmdExcluirPessoa.ExecuteNonQuery();
+                }
+
+                transaction.Commit();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                transaction.Rollback();
+                Console.WriteLine("Erro ao tentar excluir aluno: " + ex.Message);
+                return false;
+            }
+        }
+    }
     }
 }

@@ -5,6 +5,8 @@ public partial class Relatorio : ContentPage
     public Relatorio()
     {
         InitializeComponent();
+        InfoAluno aluno = new InfoAluno();
+        
     }
 
     private async void btn_cadastrar_aluno_Clicked(object sender, EventArgs e)
@@ -17,12 +19,13 @@ public partial class Relatorio : ContentPage
         await Shell.Current.GoToAsync("//informacaoAluno");
     }
 
-    private async void btn_historico_Clicked(object sender, EventArgs e)
+    private async void btn_sair_Clicked(object sender, EventArgs e)
     {
-        await Shell.Current.GoToAsync("//historico");
-    }
+        bool resposta = await DisplayAlert("Confirmação", "Tem certeza de que deseja sair?", "Sim", "Não");
 
-    private void btn_sair_Clicked(object sender, EventArgs e)
-    {
+        if(resposta)
+        {
+            await Shell.Current.GoToAsync("//login");
+        }
     }
 }

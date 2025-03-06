@@ -14,7 +14,7 @@
             <VerticalStackLayout>
 
                     <Grid 
-                        ColumnDefinitions="*, *, *, *"
+                        ColumnDefinitions="*, *, *"
                         RowDefinitions="*"
                         HorizontalOptions="Fill"
                         Background="#00D6DBFF">
@@ -42,18 +42,6 @@
                     Background="transparent"
                     WidthRequest="380"
                     HeightRequest="120"/>
-
-                    <Button
-                    Text="CONSULTAR HISTÓRICO"
-                    TextColor="Black"
-                    x:Name="btn_historico"
-                    Clicked="btn_historico_Clicked"
-                    FontSize="17"
-                    Grid.Column="2"
-                    Grid.Row="0"
-                    Background="transparent"
-                    WidthRequest="380"
-                    HeightRequest="120"/>
                     
                     <Button
                     Text="GERAR RELATÓRIOS"
@@ -61,7 +49,7 @@
                     x:Name="btn_gerar_relatorio"
                     Clicked="btn_gerar_relatorio_Clicked"
                     FontSize="17"
-                    Grid.Column="3"
+                    Grid.Column="2"
                     Grid.Row="0"
                     Background="transparent"
                     WidthRequest="380"
@@ -69,11 +57,131 @@
                     </Grid>
 
                     <Frame
-                    WidthRequest="1000"
+                    WidthRequest="1200"
                     HeightRequest="700"
                     BackgroundColor="#D80B0855"
                     BorderColor="Black">
+
+                    <Grid
+                        ColumnDefinitions="*, *, *"
+                        RowDefinitions="*, *, *, *"
+                        Padding="3"
+                        ColumnSpacing="10"
+                        RowSpacing="10">
+
+                        <Label 
+                            Text="Pesquisar Aluno pela Matrícula:"
+                            TextColor="White"
+                            HorizontalOptions="End"
+                            WidthRequest="300"
+                            Grid.Column="0"
+                            Grid.Row="0"
+                            Padding="10"
+                            FontSize="16"/>
+
+                        <Entry 
+                            x:Name="entryMatricula"
+                            Grid.Column="1"
+                            Grid.Row="0"
+                            WidthRequest="400"
+                            HeightRequest="40"
+                            HorizontalOptions="Start"
+                            VerticalOptions="Start"
+                            Placeholder="Digite a matrícula"
+                            PlaceholderColor="#AD000000"
+                            Keyboard="Numeric"
+                            BackgroundColor="White"/>
+
+                        <Button 
+                            Text="Pesquisar"
+                            x:Name="procurarAluno"
+                            Clicked="procurarAluno_Clicked"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Start"
+                            WidthRequest="200"
+                            HeightRequest="40"
+                            Grid.Column="2"
+                            Grid.Row="0"
+                            BackgroundColor="Black"
+                            TextColor="White"/>
+
+                        <Label Text="Nome:" TextColor="White" Grid.Column="0" Grid.Row="1"/>
+                        <Entry 
+                            x:Name="entryNome" Grid.Column="0" Grid.Row="1" 
+                            BackgroundColor="White" WidthRequest="230" HeightRequest="40"
+                            VerticalOptions="Start" IsEnabled="False"/>
+
+                        <Label Text="CPF:" TextColor="White" Grid.Column="1" Grid.Row="1"/>
+                        <Entry 
+                            x:Name="entryCPF" Keyboard="Numeric"
+                            Grid.Column="1" Grid.Row="1" BackgroundColor="White"
+                            WidthRequest="230" HeightRequest="40"
+                            VerticalOptions="Start" Placeholder="Sem traços"
+                            PlaceholderColor="#9F000000" IsEnabled="False"/>
+
+                        <Label Text="Matrícula:" TextColor="White" Grid.Column="2" Grid.Row="1"/>
+                        <Entry 
+                            x:Name="entryNovaMatricula" Grid.Column="2"
+                            Grid.Row="1" BackgroundColor="White"
+                            WidthRequest="260" HeightRequest="40" IsEnabled="False"
+                            VerticalOptions="Start" HorizontalOptions="End"/>
+
+                        <Label Text="Curso:" TextColor="White" Grid.Column="0" Grid.Row="2"/>
+                        <Entry 
+                            x:Name="entryCurso" Grid.Column="0"
+                            Grid.Row="2" BackgroundColor="White"
+                            WidthRequest="230" HeightRequest="40" IsEnabled="False"
+                            VerticalOptions="Start"/>
+
+                        <Label 
+                            Text="Auxílio Estudantil:" TextColor="White"
+                            Grid.Column="1" Grid.Row="2"
+                            Padding="10"
+                            HorizontalOptions="End"/>
+                        <Switch 
+                            x:Name="switchAuxilio" VerticalOptions="Start"
+                            Grid.Column="2" Grid.Row="2"
+                            ThumbColor="Black"
+                            IsEnabled="False"
+                            OnColor="#FF00A2FF"
+                            HorizontalOptions="Start"/>
+
+                        <Button
+                        Text="Excluir"
+                        x:Name="excluirAluno"
+                        Clicked="excluirAluno_Clicked"
+                        TextColor="White"
+                        IsVisible="False"
+                        FontSize="16"
+                        BackgroundColor="#9D770202"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        Grid.Column="1"
+                        Grid.Row="3"
+                        BorderWidth="4"
+                        BorderColor="#9D770202"
+                        WidthRequest="190"
+                        HeightRequest="50"/>
+                        
+                    </Grid>
+                    
                     </Frame>
+
+                    <Button
+                        Text="Salvar Alterações"
+                        x:Name="alterarAluno"
+                        Clicked="alterarAluno_Clicked"
+                        TextColor="White"
+                        FontSize="15"
+                        BackgroundColor="#CE000000"
+                        HorizontalOptions="Center"
+                        VerticalOptions="End"
+                        Grid.Column="0"
+                        Grid.Row="3"
+                        BorderWidth="14"
+                        BorderColor="Transparent"
+                        WidthRequest="230"
+                        HeightRequest="70"/>
 
                     <Button
                         Text="Sair"

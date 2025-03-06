@@ -9,6 +9,12 @@ public partial class Login: ContentPage
         InitializeComponent();
         db = new DataBaseConnection();
     }
+
+    private void cleanView()
+    {
+        EmailUsuario.Text = "";
+        senhaUsuario.Text = "";
+    }
     
     private void ImageButton_Clicked(object sender, EventArgs e)
     {

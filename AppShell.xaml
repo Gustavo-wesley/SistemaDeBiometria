@@ -19,11 +19,6 @@
         Route="cadastro" />
 
     <ShellContent
-        Title="Protected_1"
-        ContentTemplate="{DataTemplate local:HomeProtected}"
-        Route="home"/>
-
-    <ShellContent
         Title="Protected_1.1"
         ContentTemplate="{DataTemplate local:CadastrarAluno}"
         Route="cadastrarAluno"/>
@@ -32,11 +27,6 @@
         Title="Protected_1.2"
         ContentTemplate="{DataTemplate local:InfoAluno}"
         Route="informacaoAluno"/>
-
-    <ShellContent
-        Title="Protected_1.3"
-        ContentTemplate="{DataTemplate local:Historico}"
-        Route="historico"/>
 
     <ShellContent
         Title="Protected_1.4"

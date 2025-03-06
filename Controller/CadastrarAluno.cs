@@ -22,11 +22,6 @@ public partial class CadastrarAluno: ContentPage
         await Shell.Current.GoToAsync("//relatorio");
     }
 
-    private async void btn_historico_Clicked(object sender, EventArgs e)
-    {
-        await Shell.Current.GoToAsync("//historico");
-    }
-
     private void btn_gerarBiometria(object sender, EventArgs e)
     {
         gerouBiometria.IsVisible = true;
@@ -42,6 +37,7 @@ public partial class CadastrarAluno: ContentPage
             matriculaAluno.Text = "";
             cursoAluno.Text = "";
             auxilioAluno.SelectedItem = null;
+            gerouBiometria.IsVisible = false;
 
         }
     }
@@ -108,8 +104,14 @@ public partial class CadastrarAluno: ContentPage
         }
 
     }
-    private void btn_sair_Clicked(object sender, EventArgs e)
+    private async void btn_sair_Clicked(object sender, EventArgs e)
     {
+        bool resposta = await DisplayAlert("Confirmação", "Tem certeza de que deseja sair?", "Sim", "Não");
+
+        if(resposta)
+        {
+            await Shell.Current.GoToAsync("//login");
+        }
     }
 
 }

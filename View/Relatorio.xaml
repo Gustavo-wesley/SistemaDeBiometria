@@ -14,7 +14,7 @@
             <VerticalStackLayout>
 
                     <Grid 
-                        ColumnDefinitions="*, *, *, *"
+                        ColumnDefinitions="*, *, *"
                         RowDefinitions="*"
                         HorizontalOptions="Fill"
                         Background="#00D6DBFF">
@@ -45,23 +45,11 @@
                     HeightRequest="120"/>
 
                     <Button
-                    Text="CONSULTAR HISTÓRICO"
-                    TextColor="Black"
-                    x:Name="btn_historico"
-                    Clicked="btn_historico_Clicked"
-                    FontSize="17"
-                    Grid.Column="2"
-                    Grid.Row="0"
-                    Background="transparent"
-                    WidthRequest="380"
-                    HeightRequest="120"/>
-                    
-                    <Button
                     Text="GERAR RELATÓRIOS"
                     TextColor="#FF0080E9"
                     x:Name="btn_gerar_relatorio"
                     FontSize="17"
-                    Grid.Column="3"
+                    Grid.Column="2"
                     Grid.Row="0"
                     Background="transparent"
                     WidthRequest="380"
@@ -69,10 +57,89 @@
                     </Grid>
 
                     <Frame
-                    WidthRequest="1000"
+                    WidthRequest="1200"
                     HeightRequest="700"
                     BackgroundColor="#D80B0855"
                     BorderColor="Black">
+
+                    <Grid
+                        ColumnDefinitions="*, *, *"
+                        RowDefinitions="*, *, *"
+                        Padding="3"
+                        ColumnSpacing="10"
+                        RowSpacing="10">
+
+                        <Button 
+                            Text="Relatorio do aluno"
+                            HorizontalOptions="End"
+                            VerticalOptions="Center"
+                            WidthRequest="200"
+                            HeightRequest="100"
+                            Grid.Column="0"
+                            Grid.Row="0"
+                            BackgroundColor="#D8140D3B"
+                            TextColor="White"/>
+
+                        <Button 
+                            Text="Relatorio geral"
+                            HorizontalOptions="Start"
+                            VerticalOptions="Center"
+                            WidthRequest="200"
+                            HeightRequest="100"
+                            Grid.Column="2"
+                            Grid.Row="0"
+                            BackgroundColor="#D8140D3B"
+                            TextColor="White"/>
+
+                        <Label 
+                            Text="Pesquisar Aluno pela Matrícula:"
+                            TextColor="White"
+                            HorizontalOptions="End"
+                            VerticalOptions="Center"
+                            WidthRequest="300"
+                            Grid.Column="0"
+                            Grid.Row="1"
+                            Padding="10"
+                            FontSize="16"/>
+
+                        <Entry 
+                            x:Name="entryMatricula"
+                            Grid.Column="1"
+                            Grid.Row="1"
+                            WidthRequest="400"
+                            HeightRequest="40"
+                            HorizontalOptions="Start"
+                            VerticalOptions="Center"
+                            Placeholder="Digite a matrícula"
+                            PlaceholderColor="#AD000000"
+                            Keyboard="Numeric"
+                            BackgroundColor="White"/>
+
+                        <Button 
+                            Text="Pesquisar"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            WidthRequest="200"
+                            HeightRequest="40"
+                            Grid.Column="2"
+                            Grid.Row="1"
+                            BackgroundColor="Black"
+                            TextColor="White"/>
+
+                        <Button 
+                            Text="Relatorio"
+                            x:Name="btn_relatorioAluno"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            WidthRequest="200"
+                            HeightRequest="40"
+                            Grid.Column="1"
+                            Grid.Row="2"
+                            BackgroundColor="#FF10092E"
+                            TextColor="White"/>
+
+                    </Grid>
+
                     </Frame>
 
                     <Button

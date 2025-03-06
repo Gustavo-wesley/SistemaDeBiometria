@@ -2,7 +2,7 @@ is_global = true
 build_property.TargetFramework = net9.0-windows10.0.19041.0
 build_property.TargetPlatformMinVersion = 10.0.17763.0
 build_property.UsingMicrosoftNETSdkWeb = 
-build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 9A19103F-16F7-4668-BE54-9A1E7A4F7556
 build_property.InvariantGlobalization = 
 build_property.PlatformNeutralAssembly = 
 build_property.EnforceExtendedAnalyzerRules = 
@@ -21,3 +21,57 @@ build_property.CsWinRTAotWarningLevel =
 build_property.CsWinRTUseWindowsUIXamlProjections = false
 build_property.EffectiveAnalysisLevelStyle = 9.0
 build_property.EnableCodeStyleSeverity = 
+
+[C:/Users/gustw/OneDrive/Desktop/ProgBD/CadastroBio/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = CadastroBio.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[C:/Users/gustw/OneDrive/Desktop/ProgBD/CadastroBio/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = CadastroBio.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[C:/Users/gustw/OneDrive/Desktop/ProgBD/CadastroBio/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = CadastroBio.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+
+[C:/Users/gustw/OneDrive/Desktop/ProgBD/CadastroBio/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = CadastroBio.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+
+[C:/Users/gustw/OneDrive/Desktop/ProgBD/CadastroBio/View/CadastrarAluno.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = CadastroBio.View.CadastrarAluno.xaml
+build_metadata.AdditionalFiles.TargetPath = View\CadastrarAluno.xaml
+build_metadata.AdditionalFiles.RelativePath = View\CadastrarAluno.xaml
+
+[C:/Users/gustw/OneDrive/Desktop/ProgBD/CadastroBio/View/Cadastro.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = CadastroBio.View.Cadastro.xaml
+build_metadata.AdditionalFiles.TargetPath = View\Cadastro.xaml
+build_metadata.AdditionalFiles.RelativePath = View\Cadastro.xaml
+
+[C:/Users/gustw/OneDrive/Desktop/ProgBD/CadastroBio/View/InfoAluno.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = CadastroBio.View.InfoAluno.xaml
+build_metadata.AdditionalFiles.TargetPath = View\InfoAluno.xaml
+build_metadata.AdditionalFiles.RelativePath = View\InfoAluno.xaml
+
+[C:/Users/gustw/OneDrive/Desktop/ProgBD/CadastroBio/View/Login.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = CadastroBio.View.Login.xaml
+build_metadata.AdditionalFiles.TargetPath = View\Login.xaml
+build_metadata.AdditionalFiles.RelativePath = View\Login.xaml
+
+[C:/Users/gustw/OneDrive/Desktop/ProgBD/CadastroBio/View/Relatorio.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = CadastroBio.View.Relatorio.xaml
+build_metadata.AdditionalFiles.TargetPath = View\Relatorio.xaml
+build_metadata.AdditionalFiles.RelativePath = View\Relatorio.xaml
